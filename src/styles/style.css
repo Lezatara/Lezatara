@@ -1,0 +1,270 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+.app-bar {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  padding: 5px 5%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  background-color: #a8e890;
+  justify-content: space-between;
+  box-shadow: hsla(0 0% 0% / 0.1) 0 0 0.9rem 0.1rem;
+}
+
+.app-logo {
+  max-height: 90px;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 70px;
+}
+
+.search-form {
+  background-color: white;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.search-form input {
+  background: transparent;
+  width: 30vw;
+  margin-left: 0rem;
+  font-size: 0.9rem;
+  color: hsl(252, 30%, 17%);
+  border: none;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 15%;
+  height: 390px;
+  background-color: white;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: bold;
+  font-family: 'Peralta', serif;
+}
+.hero h2 {
+  font-family: 'Preahvihear', sans-serif;
+  font-size: 25px;
+}
+
+.image-hero {
+  height: 300px;
+  width: 400px;
+  border-radius: 50%;
+  background: #d2de32;
+  padding: 9px;
+}
+.image-hero .img-hero {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+#navigationDrawer {
+  height: 670px;
+  width: 1350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  align-items: center;
+  transform: translateY(-730px);
+  transition: transform 0.5s ease-in-out;
+  background: #ffcb0e13;
+  backdrop-filter: blur(9px);
+  z-index: 99;
+}
+#navigationDrawer.open {
+  transform: translateY(-70px);
+}
+#navigationDrawer ul {
+  list-style-type: none;
+}
+
+#navigationDrawer a {
+  font-family: 'Preahvihear', sans-serif;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bolder;
+  color: #000000;
+  transition: ease-in;
+  transition-duration: 300ms;
+  border-bottom: 1px solid #ffcb0e00;
+}
+#navigationDrawer a:hover {
+  color: #000000;
+  border-bottom: 5px solid #4e944f;
+}
+
+#hamburgerButton {
+  font-size: 32px;
+  color: #609966;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+#hamburgerButton:hover {
+  color: #000000;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  gap: 2%;
+  background-color: #e1ffb1;
+}
+.blog > div {
+  width: 100%;
+  font-family: 'Preahvihear', sans-serif;
+  font-size: 13px;
+  color: #000000;
+}
+
+.blog > img {
+  object-fit: cover;
+  width: 75%;
+  height: 150px;
+  background-color: #000000;
+}
+.title {
+  font-family: 'Preahvihear', sans-serif;
+  font-size: xx-large;
+}
+
+.slide-container {
+  width: 100%;
+  padding-bottom: 35px;
+}
+.card-wrapper {
+  gap: 50px;
+}
+.slide-content {
+  padding: 20px;
+  width: 90%;
+}
+
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1px 14px;
+}
+
+.card {
+  flex: 0 0 calc((100% - 3 * 20px) / 4);
+  border-radius: 25px;
+  background-color: #e1ffb1;
+}
+.image-content {
+  row-gap: 5px;
+  padding: 25px 0;
+}
+
+.overlay {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  border-radius: 25px 25px 0 25px;
+}
+.card-image {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #d2de32;
+  padding: 3px;
+}
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.name a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  text-decoration: none;
+}
+.description {
+  font-family: 'Preahvihear', sans-serif;
+  font-size: 14px;
+  color: #000000;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.button {
+  border: none;
+  font-size: 16px;
+  padding: 8px 16px;
+
+  background-color: #000000;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.button:hover {
+  background: #ffca0e;
+}
+
+.button a {
+  color: #ffca0e;
+  text-decoration: none;
+}
+.button a:hover {
+  color: #000000;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 5%;
+  background-color: #a8e890;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+}
+
+.contact {
+  display: block;
+}
+
+.contact h2 {
+  font-size: 1rem;
+}
+.contact > p {
+  display: flex;
+  gap: 10px;
+}
+.contact > p > img {
+  width: 10%;
+  font-weight: bold;
+}
