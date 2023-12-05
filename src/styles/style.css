@@ -51,10 +51,10 @@ body {
 .hero h1 {
   font-size: 60px;
   font-weight: bold;
-  font-family: 'Peralta', serif;
+  font-family: "Peralta", serif;
 }
 .hero h2 {
-  font-family: 'Preahvihear', sans-serif;
+  font-family: "Preahvihear", sans-serif;
   font-size: 25px;
 }
 
@@ -94,7 +94,7 @@ body {
 }
 
 #navigationDrawer a {
-  font-family: 'Preahvihear', sans-serif;
+  font-family: "Preahvihear", sans-serif;
   text-decoration: none;
   font-size: 30px;
   font-weight: bolder;
@@ -133,7 +133,7 @@ body {
 }
 .blog > div {
   width: 100%;
-  font-family: 'Preahvihear', sans-serif;
+  font-family: "Preahvihear", sans-serif;
   font-size: 13px;
   color: #000000;
 }
@@ -145,17 +145,20 @@ body {
   background-color: #000000;
 }
 .title {
-  font-family: 'Preahvihear', sans-serif;
+  font-family: "Preahvihear", sans-serif;
   font-size: xx-large;
 }
 
 .slide-container {
   width: 100%;
+  height: 100%;
   padding-bottom: 35px;
 }
 .card-wrapper {
   gap: 50px;
+  width: 100%;
 }
+
 .slide-content {
   padding: 20px;
   width: 90%;
@@ -201,19 +204,19 @@ body {
   border-radius: 50%;
 }
 .name a {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: bold;
   color: #000000;
   text-decoration: none;
 }
 .description {
-  font-family: 'Preahvihear', sans-serif;
+  font-family: "Preahvihear", sans-serif;
   font-size: 14px;
   color: #000000;
   text-align: center;
   display: -webkit-box;
-  -webkit-line-clamp: 7;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -228,7 +231,7 @@ body {
   margin: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .button:hover {
@@ -243,13 +246,56 @@ body {
   color: #000000;
 }
 
+/*main content*/
+/* #mainContent {
+  padding: 0;
+  flex: 1;
+} */
+
+.result {
+  margin: 500px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.result-name,
+.result-picture {
+  flex: 1;
+}
+
+.result-picture {
+  max-width: 100%; /* Pastikan gambar tidak melebihi lebar kontainer */
+  height: auto;
+  margin-right: 20px; /* Jarak antara gambar dan nama */
+}
+
+.result-description h3 {
+  flex: 1;
+  margin: 8px 0;
+}
+
+.result-info h3 {
+  margin: 8px 0;
+}
+
+.ingredients-list,
+.result-steps {
+  list-style-type: none;
+  padding: 0;
+}
+
+.ingredients-list li,
+.result-steps li {
+  margin-bottom: 5px; /* Jarak antara setiap bahan atau langkah */
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 5%;
   background-color: #a8e890;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 12px;
 }
 

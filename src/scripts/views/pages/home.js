@@ -1,5 +1,5 @@
-import TheRecipesSource from '../../data/therecipes-source';
-import { createRecipeItemTemplate } from '../templates/template-creator';
+import TheRecipesSource from "../../data/therecipes-source";
+import { createRecipeItemTemplate } from "../templates/template-creator";
 
 const Home = {
   async render() {
@@ -41,11 +41,13 @@ const Home = {
       <div class="slide-container swiper">
       <div class="slide-content">
       <div id="card-wrapper" class="card-wrapper swiper-wrapper">
+      
       </div>
       <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         </div>
         </div>
+        
       </main>
     
         `;
@@ -53,7 +55,7 @@ const Home = {
 
   async afterRender() {
     const foods = await TheRecipesSource.ListRecipe();
-    const recipesContainer = document.querySelector('#card-wrapper');
+    const recipesContainer = document.querySelector("#card-wrapper");
     foods.forEach((result) => {
       recipesContainer.innerHTML += createRecipeItemTemplate(result);
     });
