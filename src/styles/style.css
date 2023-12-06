@@ -110,19 +110,22 @@ body {
 
 #hamburgerButton {
   font-size: 32px;
-  color: #609966;
+  color: white;
   border: none;
   cursor: pointer;
   background-color: transparent;
 }
+
 #hamburgerButton:hover {
   color: #000000;
 }
+
 .content {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .blog {
   display: flex;
   justify-content: center;
@@ -131,6 +134,7 @@ body {
   gap: 2%;
   background-color: #e1ffb1;
 }
+
 .blog > div {
   width: 100%;
   font-family: "Preahvihear", sans-serif;
@@ -144,6 +148,14 @@ body {
   height: 150px;
   background-color: #000000;
 }
+
+.blog p {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
 .title {
   font-family: "Preahvihear", sans-serif;
   font-size: xx-large;
@@ -177,6 +189,7 @@ body {
   border-radius: 25px;
   background-color: #e1ffb1;
 }
+
 .image-content {
   row-gap: 5px;
   padding: 25px 0;
@@ -190,6 +203,7 @@ body {
   background-color: #000000;
   border-radius: 25px 25px 0 25px;
 }
+
 .card-image {
   height: 150px;
   width: 150px;
@@ -197,12 +211,14 @@ body {
   background: #d2de32;
   padding: 3px;
 }
+
 .card-image .card-img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   border-radius: 50%;
 }
+
 .name a {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
@@ -210,6 +226,7 @@ body {
   color: #000000;
   text-decoration: none;
 }
+
 .description {
   font-family: "Preahvihear", sans-serif;
   font-size: 14px;
@@ -313,4 +330,298 @@ body {
 .contact > p > img {
   width: 10%;
   font-weight: bold;
+}
+
+/* Style untuk profil tim */
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.team {
+  margin-top: 20px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.members {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tiga anggota per baris */
+  grid-gap: 20px;
+}
+
+.member {
+  border-radius: 8px;
+  border: 2px solid black;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic {
+  width: 100px; /* Sesuaikan ukuran foto profil */
+  height: 100px; /* Sesuaikan ukuran foto profil */
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 10px;
+}
+
+.member h3 {
+  margin-top: 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+.member ul {
+  padding: 0;
+  list-style: none;
+}
+
+.member ul li {
+  margin-bottom: 8px;
+}
+
+.member ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.member ul li a:hover {
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+.member:hover {
+  transform: scale(1.1);
+}
+
+.member .profile-pic {
+  transition: transform 0.3s ease-in-out;
+}
+
+.member:hover .profile-pic {
+  transform: scale(1.1);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  margin-top: 15px;
+}
+
+/* Icon LinkedIn */
+.social-links .fab.fa-linkedin {
+  filter: grayscale(100%); /* Membuat ikon menjadi hitam */
+  transition: filter 0.3s ease-in-out; /* Transisi saat hover */
+}
+
+.social-links .fab.fa-linkedin:hover {
+  filter: none; /* Menghapus filter grayscale saat dihover */
+  background-color: #0077B5; /* Warna latar belakang LinkedIn */
+  color: #ffffff; /* Warna ikon (putih) saat dihover */
+}
+
+/* Icon GitHub */
+.social-links .fab.fa-github {
+  filter: grayscale(100%); /* Membuat ikon menjadi hitam */
+  transition: filter 0.3s ease-in-out; /* Transisi saat hover */
+}
+
+.social-links .fab.fa-github:hover {
+  filter: none; /* Menghapus filter grayscale saat dihover */
+  background-color: #ffffff; /* Warna latar belakang GitHub */
+  color: #000000; /* Warna ikon (hitam) saat dihover */
+}
+
+/* Icon Instagram */
+.social-links .fab.fa-instagram {
+  filter: grayscale(100%); /* Membuat ikon menjadi hitam */
+  transition: filter 0.3s ease-in-out; /* Transisi saat hover */
+}
+
+.social-links .fab.fa-instagram:hover {
+  filter: none; /* Menghapus filter grayscale saat dihover */
+  background: linear-gradient(to right, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80); /* Warna latar belakang Instagram (gradient warna asli) */
+  color: #ffffff; /* Warna ikon (putih) saat dihover */
+}
+
+.social-links li {
+  margin-right: 10px;
+}
+
+.social-links i {
+  font-size: 20px; /* Sesuaikan ukuran ikon sesuai kebutuhan */
+}
+
+/* Media Queries untuk menyesuaikan border pada layar yang berbeda */
+@media screen and (max-width: 768px) {
+  .app-bar {
+    padding: 5px 5%;
+    height: 50px;
+  }
+
+  .hero {
+    padding: 1px 8%;
+    height: 280px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero h2 {
+    font-size: 18px;
+  }
+
+  .image-hero {
+    height: 200px;
+    width: 250px;
+  }
+
+  .content {
+    padding: 10px; /* Mengurangi padding pada layar kecil */
+  }
+
+  .blog {
+    flex-direction: column; /* Ubah menjadi tata letak kolom */
+    height: auto;
+    padding: 10px;
+  }
+
+  .blog > div {
+    width: 100%;
+    margin-bottom: 10px; /* Berikan ruang antara elemen */
+    text-align: center;
+  }
+
+  .blog > img {
+    max-width: 100%; /* Mengisi lebar konten */
+    height: auto;
+  }
+
+  .card {
+    flex: 0 0 100%;
+    margin-bottom: 15px;
+  }
+
+  .card-image {
+    height: 100px;
+    width: 100px;
+  }
+
+  .name a {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 12px;
+    -webkit-line-clamp: 2;
+  }
+
+  .button {
+    font-size: 12px;
+    padding: 5px 10px;
+    margin: 6px;
+  }
+
+  .footer {
+    padding: 5px 5%;
+  }
+
+  .contact > p > img {
+    width: 15%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .app-bar {
+    padding: 5px 8%;
+    height: 60px;
+  }
+
+  .hero {
+    padding: 1px 12%;
+    height: 350px;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .image-hero {
+    height: 250px;
+    width: 300px;
+  }
+
+  .blog {
+    height: 180px;
+  }
+
+  .blog > img {
+    width: 60%;
+    height: 180px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card {
+    flex: 0 0 calc((100% - 2 * 20px) / 3);
+  }
+
+  .card-image {
+    height: 120px;
+    width: 120px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 6px 12px;
+    margin: 8px;
+  }
+
+  .footer {
+    padding: 5px 8%;
+  }
+
+  .contact > p > img {
+    width: 12%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* Atur responsifitas untuk lebar layar besar di sini */
+  .hero {
+    padding: 1px 20%;
+  }
+  
+  .hero h1 {
+    font-size: 60px;
+  }
+  
+  .hero h2 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .members {
+    grid-template-columns: repeat(5, 1fr); /* Dua anggota per baris */
+  }
 }
