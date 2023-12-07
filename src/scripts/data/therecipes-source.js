@@ -1,4 +1,4 @@
-import API_ENDPOINT from "../globals/api-endpoint";
+import API_ENDPOINT from '../globals/api-endpoint';
 
 class TheRecipesSource {
   static async ListRecipe() {
@@ -6,9 +6,14 @@ class TheRecipesSource {
     const responseJson = await response.json();
     return responseJson.result;
   }
+  static async ListRegion() {
+    const response = await fetch(API_ENDPOINT.LIST_REGION);
+    const responseJson = await response.json();
+    return responseJson.result;
+  }
 
-  static async DetailRecipe(id) {
-    const response = await fetch(API_ENDPOINT.DETAIL(id));
+  static async DetailRecipe(name) {
+    const response = await fetch(API_ENDPOINT.DETAIL(name));
     const responseJson = await response.json();
     return responseJson.result;
   }

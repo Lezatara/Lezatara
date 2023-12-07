@@ -11,7 +11,7 @@ const routes = {
   '/recipes': Recipes,
   '/favorite': Favorite,
   '/about': About,
-  '/detail-recipes/:id': DetailRecipes,
+  '/detail-recipes/:name': DetailRecipes,
   '/detail-regions/:id': DetailRegions,
 };
 
