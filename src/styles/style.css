@@ -2,6 +2,7 @@ body {
   padding: 0;
   margin: 0;
 }
+
 .app-bar {
   position: sticky;
   top: 0;
@@ -25,18 +26,33 @@ body {
 }
 
 .search-form {
-  background-color: white;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
   border-radius: 2rem;
   padding: 0.5rem 1rem;
+  background-color: white;
 }
 
-.search-form input {
-  background: transparent;
+.search-form input[type="search"] {
   width: 30vw;
   margin-left: 0rem;
-  font-size: 0.9rem;
+  margin-right: 1rem;
+  background: transparent;
+  font-size: 1rem;
   color: hsl(252, 30%, 17%);
   border: none;
+  border-radius: 0.5rem;
+}
+
+.search-form .fas.fa-search {
+  position: absolute;
+  right: 10px;
+  font-size: 1.2rem;
+  color: #888;
+  cursor: pointer;
 }
 
 .hero {
@@ -46,16 +62,20 @@ body {
   padding: 1px 15%;
   height: 390px;
   background-color: white;
+  margin-bottom: 10px;
 }
 
 .hero h1 {
   font-size: 60px;
   font-weight: bold;
   font-family: "Peralta", serif;
+  margin-bottom: 20px;
 }
+
 .hero h2 {
   font-family: "Preahvihear", sans-serif;
   font-size: 25px;
+  margin-bottom: 20px;
 }
 
 .image-hero {
@@ -64,7 +84,10 @@ body {
   border-radius: 50%;
   background: #d2de32;
   padding: 9px;
+  overflow: hidden;
+  margin-bottom: 20px;
 }
+
 .image-hero .img-hero {
   height: 100%;
   width: 100%;
@@ -73,8 +96,8 @@ body {
 }
 
 #navigationDrawer {
-  height: 670px;
-  width: 1350px;
+  height: 100px;
+  width: 1500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,13 +105,15 @@ body {
   align-items: center;
   transform: translateY(-730px);
   transition: transform 0.5s ease-in-out;
-  background: #ffcb0e13;
-  backdrop-filter: blur(9px);
+  background: #00000013;
+  backdrop-filter: blur(7px);
   z-index: 99;
 }
+
 #navigationDrawer.open {
   transform: translateY(-70px);
 }
+
 #navigationDrawer ul {
   list-style-type: none;
 }
@@ -98,11 +123,12 @@ body {
   text-decoration: none;
   font-size: 30px;
   font-weight: bolder;
-  color: #000000;
+  color: #ffffff;
   transition: ease-in;
   transition-duration: 300ms;
   border-bottom: 1px solid #ffcb0e00;
 }
+
 #navigationDrawer a:hover {
   color: #000000;
   border-bottom: 5px solid #4e944f;
@@ -152,8 +178,8 @@ body {
 .blog p {
   width: 100%;
   margin: 0 auto;
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .title {
@@ -259,17 +285,17 @@ body {
   color: #ffca0e;
   text-decoration: none;
 }
+
 .button a:hover {
   color: #000000;
 }
-
+/**/
 .result {
   margin: 0 auto;
   width: 100%;
   max-width: 800px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* grid-template-rows: auto auto; */
+  grid-template-rows: auto auto auto;
   gap: 18px 16px;
   padding: 32px;
 }
@@ -281,11 +307,10 @@ body {
 }
 
 .result-picture {
-  /* grid-row: 2; */
   height: 100%;
   width: 85%;
-
   grid-column: 1;
+  border-radius: 8px;
 }
 
 .result-description h3 {
@@ -311,11 +336,22 @@ body {
   text-align: justify;
 }
 
+.ingredients-and-picture {
+  display: grid;
+  grid-template-columns: 1fr; /* Kolom tunggal pada layar kecil */
+  gap: 16px;
+}
+
+.ingredients,
+.result-picture {
+  width: 100%;
+}
+
 .ingredients-list li,
 .result-steps li {
   margin-bottom: 5px; /* Jarak antara setiap bahan atau langkah */
 }
-
+/**/
 .footer {
   display: flex;
   justify-content: space-between;
@@ -333,10 +369,12 @@ body {
 .contact h2 {
   font-size: 1rem;
 }
+
 .contact > p {
   display: flex;
   gap: 10px;
 }
+
 .contact > p > img {
   width: 10%;
   font-weight: bold;
@@ -360,10 +398,9 @@ body {
 }
 
 .members {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 10px;
-  gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tiga anggota per baris */
+  grid-gap: 20px;
 }
 
 .member {
@@ -374,7 +411,6 @@ body {
   position: relative;
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
-  flex: 1 1 240px;
 }
 
 .profile-pic {
@@ -439,7 +475,7 @@ body {
 
 .social-links .fab.fa-linkedin:hover {
   filter: none; /* Menghapus filter grayscale saat dihover */
-  background-color: #0077b5; /* Warna latar belakang LinkedIn */
+  background-color: #0077B5; /* Warna latar belakang LinkedIn */
   color: #ffffff; /* Warna ikon (putih) saat dihover */
 }
 

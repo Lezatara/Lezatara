@@ -5,6 +5,7 @@ import TheRecipesSource from "../../data/therecipes-source";
 const DetailRecipes = {
   async render() {
     return `
+    <h2 class="title" >Detail Recipe Page</h2>
    <div id="result" class="result">
    <div id="likeButtonContainer"></div>
     

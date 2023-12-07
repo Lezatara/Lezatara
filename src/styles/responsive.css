@@ -1,13 +1,28 @@
 /* Media Queries untuk menyesuaikan border pada layar yang berbeda */
 @media screen and (max-width: 768px) {
+  /*app-bar*/
   .app-bar {
-    padding: 5px 5%;
-    height: 50px;
+    padding: 10px 3%;
+    height: 55px;
   }
 
+  .app-logo {
+    max-height: 60px;
+  }
+
+  .search-form input {
+    max-width: 50vw;
+  }
+
+  .search-form input[type="search"] {
+    font-size: 0.9rem;
+  }
+
+  /*home*/
   .hero {
     padding: 1px 8%;
-    height: 280px;
+    height: auto;
+    min-height: 390px;
   }
 
   .hero h1 {
@@ -44,6 +59,10 @@
     height: auto;
   }
 
+  .blog p {
+    font-size: 14px;
+  }
+
   .card {
     flex: 0 0 100%;
     margin-bottom: 15px;
@@ -69,6 +88,80 @@
     margin: 6px;
   }
 
+  /*detail recipe*/
+  .result {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr; /* Menggunakan satu kolom untuk tata letak ponsel */
+    gap: 18px 16px;
+    padding: 32px;
+  }
+
+  .result .result-name {
+    grid-column: 1 / span 1;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .result-picture {
+    height: 100%;
+    width: 83%; /* Lebar gambar 100% untuk mengisi kolom */
+    border-radius: 8px; /* Untuk sudut yang lebih lembut */
+  }
+
+  .result-description {
+    grid-column: 1 / span 1;
+  }
+
+  .result-description h3 {
+    margin: 8px 0;
+  }
+
+  .result-description p {
+    text-align: justify;
+    margin-right: 70px;
+  }
+
+  .result-info h3 {
+    margin: 8px 0;
+  }
+
+  .ingredients-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .result-steps {
+    padding-left: 20px;
+    margin-right: 70px;
+    text-align: justify;
+  }
+
+  .ingredients-list li,
+  .result-steps li {
+    margin-bottom: 5px;
+  }
+
+  /*about*/
+  .about-container > p {
+    text-align: justify;
+  }
+  .members {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+  }
+
+  .member {
+    padding: 15px;
+  }
+
+  /*footer*/
   .footer {
     padding: 5px 5%;
   }
@@ -84,6 +177,7 @@
     height: 60px;
   }
 
+  /*home*/
   .hero {
     padding: 1px 12%;
     height: 350px;
@@ -131,6 +225,7 @@
     margin: 8px;
   }
 
+  /*footer*/
   .footer {
     padding: 5px 8%;
   }
