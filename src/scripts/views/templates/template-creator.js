@@ -40,35 +40,45 @@ const createRecipeItemTemplate = (result) => `
        
 `;
 
-const createRegionItemTemplate = (result) => `
-       <div class="card">
-         <div class="overlay">
-           <div class="image-content">
-             <div class="card-image">
-               <img src="${CONFIG.BASE_IMAGE_URL + result.id}" alt="${result.name || "-"}"class="card-img" />
-             </div>
-           </div>
-         </div>
-         <div class="card-content">
-           <h2 class="name"><a href="${`/#/detail-regions/${result}`}">${result || "-"}</a></h2>
-           <p class="description">${result.desc}</p>
+const createRegionItemTemplate = (result) => {
+  const regionImageName = result.toLowerCase().replace(/\s+/g, "_") + ".jpeg";
 
-           <button class="button"><a href="${`/#/detail-recipes/${result.regional}`}">View More</a></button>
-         </div>
-         
+  return `
+        <div class="result-item">
+          <div class="result-item-header">
+           <img src="./${regionImageName}" alt="${result}">
+            </div>
+        
+        <div class="result-content">
+          <h2 class="name"><a href="${`/#/detail-regions/${result}`}">${result || "-"}</a></h2>
+          <p class="description">${result.desc}</p>
+
+          <button class="button"><a href="${`/#/detail-regions/${result.regional}`}">Lihat Masakan</a></button>
+        </div>
+        </div>
+      </div>
+`;
+};
+
+const createDetailRegionTemplate = (result) => `
+        <div class="result-item">
+          <div class="result-item-header">
+            <div class="result-item-picture" src="${CONFIG.BASE_IMAGE_URL + result.id} alt="${result.name}">
+          </div>
+      </div>
        </div>
 `;
 
 const createLikeButtonTemplate = () => `
-  <button aria-label="like this movie" id="likeButton" class="like">
+  <button aria-label="like this recipe" id="likeButton" class="like">
      <i class="fa fa-heart-o" aria-hidden="true"></i>
   </button>
 `;
 
 const createLikedButtonTemplate = () => `
-  <button aria-label="unlike this movie" id="likeButton" class="like">
+  <button aria-label="unlike this recipe" id="likeButton" class="like">
     <i class="fa fa-heart" aria-hidden="true"></i>
   </button>
 `;
 
-export { createRecipeItemTemplate, createRecipesDetailTemplate, createRegionItemTemplate, createLikeButtonTemplate, createLikedButtonTemplate };
+export { createRecipeItemTemplate, createRecipesDetailTemplate, createRegionItemTemplate, createDetailRegionTemplate, createLikeButtonTemplate, createLikedButtonTemplate };
