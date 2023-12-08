@@ -20,6 +20,38 @@ const Recipes = {
       recipesContainer.innerHTML += createRegionItemTemplate(result);
     });
   },
+  regions: [
+    {
+      img: "./Balinusra.jpeg",
+    },
+    {
+      img: "./Kalimantan.jpeg",
+    },
+    {
+      img: "./Papuamaluku.jpeg",
+    },
+    {
+      img: "./Sulawesi.jpeg",
+    },
+    {
+      img: "./Sumatera.jpeg",
+    },
+    {
+      img: "./Jawa.jpeg",
+    }
+  ],
+
+  generatePulau(regions) {
+    return `
+      <div class="pulau">
+        <img src="${regions.img}" alt="pulau">
+      </div>
+    `
+  }
 };
+
+
+
+  
 
 export default Recipes;

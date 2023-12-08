@@ -40,13 +40,9 @@ const createRecipeItemTemplate = (result) => `
        
 `;
 
-const createRegionItemTemplate = (result) => {
-  const regionImageName = result.toLowerCase().replace(/\s+/g, "_") + ".jpeg";
-
-  return `
+const createRegionItemTemplate = (result) =>`
         <div class="result-item">
           <div class="result-item-header">
-           <img src="./${regionImageName}" alt="${result}">
             </div>
         
         <div class="result-content">
@@ -58,7 +54,6 @@ const createRegionItemTemplate = (result) => {
         </div>
       </div>
 `;
-};
 
 const createDetailRegionTemplate = (result) => `
         <div class="result-item">
