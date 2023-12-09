@@ -3,28 +3,33 @@ import TheRecipesSource from '../../data/therecipes-source';
 const Recipes = {
   regions: [
     {
-      regional: 'Bali-Nusa Tenggara',
+      name: 'Bali-Nusa Tenggara',
+      regional: 'Balinusra',
       img: './Balinusra.jpeg',
-      rendang: 'https://lezatara-backend.vercel.app/detail-recipes/rendang',
     },
     {
+      name: 'Kalimantan',
       regional: 'Kalimantan',
       img: './Kalimantan.jpeg',
     },
     {
-      regional: 'Papua-Maluku',
+      name: 'Papua-Maluku',
+      regional: 'Papuamaluku',
       img: './Papuamaluku.jpeg',
     },
     {
+      name: 'Sulawesi',
       regional: 'Sulawesi',
       img: './Sulawesi.jpeg',
     },
     {
+      name: 'Sumatera',
       regional: 'Sumatera',
       img: './Sumatera.jpeg',
     },
 
     {
+      name: 'Jawa',
       regional: 'Jawa',
       img: './Jawa.jpeg',
     },
@@ -40,7 +45,7 @@ const Recipes = {
     }"/>
       
   <div class="result-content">
-    <h2 class="name"><a href="${pulau.regional}">${pulau.regional}</a></h2>
+    <h2 class="name"><a href="${pulau.regional}">${pulau.name}</a></h2>
     <button class="button"><a href="${`/#/detail-regions/${pulau.regional}`}">Lihat Masakan</a></button>
   </div>
   

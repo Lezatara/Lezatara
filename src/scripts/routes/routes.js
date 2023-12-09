@@ -12,7 +12,7 @@ const routes = {
   '/favorite': Favorite,
   '/about': About,
   '/detail-recipes/:name': DetailRecipes,
-  '/detail-regions/:id': DetailRegions,
+  '/detail-regions/:regional': DetailRegions,
 };
 
 export default routes;

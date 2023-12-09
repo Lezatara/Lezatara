@@ -1,4 +1,4 @@
-import API_ENDPOINT from "../globals/api-endpoint";
+import API_ENDPOINT from '../globals/api-endpoint';
 
 // const regionData = [
 //   { name: "Sumatera", desc: "Deskripsi Sumatera yang ditambahkan secara manual." },
@@ -32,8 +32,8 @@ class TheRecipesSource {
     return responseJson.result;
   }
 
-  static async DetailRegion() {
-    const response = await fetch(API_ENDPOINT.DETAIL_REGION);
+  static async DetailRegion(regional) {
+    const response = await fetch(API_ENDPOINT.DETAIL_REGION(regional));
     const responseJson = await response.json();
     return responseJson.result;
   }
