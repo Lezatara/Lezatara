@@ -46,7 +46,6 @@ body {
   color: hsl(252, 30%, 17%);
   border: none;
   border-radius: 0.5rem;
-  font-family: 'Rubik', sans-serif;
 }
 
 .search-form .fas.fa-search {
@@ -70,12 +69,12 @@ body {
 .hero h1 {
   font-size: 60px;
   font-weight: bold;
-  font-family: 'Quicksand', serif;
+  font-family: 'Montserrat', serif;
   margin-bottom: 20px;
 }
 
 .hero h2 {
-  font-family: 'Montserrat', serif;
+  font-family: 'Preahvihear', sans-serif;
   font-size: 25px;
   margin-bottom: 20px;
 }
@@ -120,7 +119,7 @@ body {
 }
 
 #navigationDrawer a {
-  font-family: 'Quicksand', serif;
+  font-family: 'Preahvihear', sans-serif;
   text-decoration: none;
   font-size: 30px;
   font-weight: bolder;
@@ -164,8 +163,8 @@ body {
 
 .blog > div {
   width: 100%;
-  font-family: 'Rubik', sans-serif;
-  font-size: 23px;
+  font-family: 'Preahvihear', sans-serif;
+  font-size: 13px;
   color: #000000;
 }
 
@@ -184,7 +183,7 @@ body {
 }
 
 .title {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Preahvihear', sans-serif;
   font-size: xx-large;
 }
 
@@ -257,7 +256,7 @@ body {
 }
 
 .description {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Preahvihear', sans-serif;
   font-size: 14px;
   color: #000000;
   text-align: center;
@@ -277,7 +276,7 @@ body {
   margin: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .button:hover {
@@ -458,9 +457,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 5px 5%;
-  background-color: #ef9595;
-  font-family: 'Rubik', sans-serif;
-  font-weight: bold;
+  background-color: #a8e890;
+  font-family: 'Poppins', sans-serif;
   font-size: 12px;
 }
 

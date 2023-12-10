@@ -40,7 +40,7 @@ const Recipes = {
     <div class="result-item">
     <div class="result-item-header">
     </div>
-      <img class="result-item-picture-islands" src="${pulau.img}" alt="${
+      <img class="result-item-picture" src="${pulau.img}" alt="${
       pulau.regional
     }"/>
       
