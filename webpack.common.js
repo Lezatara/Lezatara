@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
+const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -36,6 +37,29 @@ module.exports = {
         {
           from: path.resolve(__dirname, 'src/asset/'),
           to: path.resolve(__dirname, 'dist/'),
+        },
+      ],
+    }),
+    new WorkboxWebpackPlugin.GenerateSW({
+      swDest: './sw.bundle.js',
+      runtimeCaching: [
+        {
+          urlPattern: ({ url }) =>
+            url.href.startsWith('https://lezatara-backend.vercel.app/'),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'therecipedb-api',
+          },
+        },
+        {
+          urlPattern: ({ url }) =>
+            url.href.startsWith(
+              'https://lezatara-backend.vercel.app/foods/image/'
+            ),
+          handler: 'StaleWhileRevalidate',
+          options: {
+            cacheName: 'therecipedb-image-api',
+          },
         },
       ],
     }),

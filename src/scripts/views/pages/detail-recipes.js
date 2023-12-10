@@ -1,12 +1,13 @@
-import UrlParser from "../../routes/url-parser";
-import { createRecipesDetailTemplate } from "../templates/template-creator";
-import TheRecipesSource from "../../data/therecipes-source";
+import UrlParser from '../../routes/url-parser';
+import { createRecipesDetailTemplate } from '../templates/template-creator';
+import TheRecipesSource from '../../data/therecipes-source';
+import LikeButtonInitiator from '../../utils/like-button-initiator';
 
 const DetailRecipes = {
   async render() {
     return `
     <h2 class="title" >Detail Recipe</h2>
-   <div id="result" class="result">
+   <div id="result" class="result"></div>
    <div id="likeButtonContainer"></div>
     
       `;
@@ -16,14 +17,13 @@ const DetailRecipes = {
     // Fungsi ini akan dipanggil setelah render()
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const detail = await TheRecipesSource.DetailRecipe(url.name);
-    const recipesContainer = document.querySelector("#result");
+    const recipesContainer = document.querySelector('#result');
     detail.forEach((result) => {
       recipesContainer.innerHTML = createRecipesDetailTemplate(result);
     });
     LikeButtonInitiator.init({
-      likeButtonContainer: document.querySelector("#likeButtonContainer"),
+      likeButtonContainer: document.querySelector('#likeButtonContainer'),
       result: {
-        id: result.id,
         name: result.name,
         desc: result.desc,
         picture: result.picture,

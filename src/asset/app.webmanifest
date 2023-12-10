@@ -1,0 +1,30 @@
+{
+  "id": "recipe-catalogue-lite-pwa-1",
+  "start_url": "./index.html",
+  "name": "Recipe Catalogue Lite",
+  "short_name": "Recipe Lite",
+  "description": "Free Catalogue Recipe for you",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#D84315",
+  "icons": [
+    {
+      "src": "/icons/logo-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/logo-144x144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/logo-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
