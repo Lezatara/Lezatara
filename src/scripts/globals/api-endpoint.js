@@ -6,6 +6,7 @@ const API_ENDPOINT = {
   DETAIL: (name) => `${CONFIG.BASE_URL}detail-recipes/${name}`,
   DETAIL_REGION: (regional) => `${CONFIG.BASE_URL}detail-regions/${regional}`,
   GET_REVIEW: (id) => `${CONFIG.BASE_URL}foods/${id}/review`,
+  SEARCH: (searchTerm) => `${CONFIG.BASE_URL}foods/search?name=${searchTerm}`,
 };
 
 export default API_ENDPOINT;
