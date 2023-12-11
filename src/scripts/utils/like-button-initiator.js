@@ -4,10 +4,11 @@ import {
   createLikedButtonTemplate,
 } from '../views/templates/template-creator';
 
-const LikeButtonInitiator = {
+const LikeButtonPresenter = {
   async init({ likeButtonContainer, result }) {
     this._likeButtonContainer = likeButtonContainer;
     this._result = result;
+    this._favoriteRecipe = FavoriteRecipeIdb;
 
     await this._renderButton();
   },
@@ -23,7 +24,7 @@ const LikeButtonInitiator = {
   },
 
   async _isRecipeExist(name) {
-    const result = await FavoriteRecipeIdb.getRecipe(name);
+    const result = await this._favoriteRecipe.getRecipe(name);
     return !!result;
   },
 
@@ -32,7 +33,7 @@ const LikeButtonInitiator = {
 
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      await FavoriteRecipeIdb.putRecipe(this._result);
+      await this._favoriteRecipe.putRecipe(this._result);
       this._renderButton();
     });
   },
@@ -42,10 +43,10 @@ const LikeButtonInitiator = {
 
     const likeButton = document.querySelector('#likeButton');
     likeButton.addEventListener('click', async () => {
-      await FavoriteRecipeIdb.deleteRecipe(this._result.name);
+      await this._favoriteRecipe.deleteRecipe(this._result.name);
       this._renderButton();
     });
   },
 };
 
-export default LikeButtonInitiator;
+export default LikeButtonPresenter;

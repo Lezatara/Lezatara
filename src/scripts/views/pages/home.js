@@ -35,7 +35,8 @@ const Home = {
 
     <!-- Top Recipes -->
   <main id="mainContent">
-      <section class="content">
+      
+      <recipe-list></recipe-list>
         <h2 class="title" tabindex="0">Top Recipes</h2>
       </section>
       <div class="slide-container swiper">

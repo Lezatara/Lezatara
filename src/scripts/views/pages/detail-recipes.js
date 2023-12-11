@@ -1,7 +1,8 @@
 import UrlParser from '../../routes/url-parser';
 import { createRecipesDetailTemplate } from '../templates/template-creator';
 import TheRecipesSource from '../../data/therecipes-source';
-import LikeButtonInitiator from '../../utils/like-button-initiator';
+import LikeButtonPresenter from '../../utils/like-button-initiator';
+import FavoriteRecipeIdb from '../../data/favorite-recipe-idb';
 
 const DetailRecipes = {
   async render() {
@@ -21,13 +22,12 @@ const DetailRecipes = {
     detail.forEach((result) => {
       recipesContainer.innerHTML = createRecipesDetailTemplate(result);
     });
-    LikeButtonInitiator.init({
+    LikeButtonPresenter.init({
       likeButtonContainer: document.querySelector('#likeButtonContainer'),
+      favoriteRecipe: FavoriteRecipeIdb,
       result: {
-        name: result.name,
-        desc: result.desc,
-        picture: result.picture,
-        regional: result.regional,
+        name: url.name,
+        desc: detail.desc,
       },
     });
   },

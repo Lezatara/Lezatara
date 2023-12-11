@@ -17,10 +17,25 @@ const FavoriteRecipeIdb = {
     return (await dbPromise).getAll(OBJECT_STORE_NAME);
   },
   async putRecipe(result) {
+    if (!result.hasOwnProperty('name')) {
+      return;
+    }
     return (await dbPromise).put(OBJECT_STORE_NAME, result);
   },
   async deleteRecipe(name) {
     return (await dbPromise).delete(OBJECT_STORE_NAME, name);
+  },
+
+  async searchRecipe(query) {
+    return (await this.getAllRecipe()).filter((result) => {
+      const loweredCaseRecipeName = (result.name || '-').toLowerCase();
+      const jammedRecipeName = loweredCaseRecipeName.replace(/\s/g, '');
+
+      const loweredCaseQuery = query.toLowerCase();
+      const jammedQuery = loweredCaseQuery.replace(/\s/g, '');
+
+      return jammedRecipeName.indexOf(jammedQuery) !== -1;
+    });
   },
 };
 

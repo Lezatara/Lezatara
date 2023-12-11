@@ -48,6 +48,30 @@ const createRecipeItemTemplate = (result) => `
        
 `;
 
+const createRecipeFavoriteTemplate = (result) => `
+       <div class="card swiper-slide">
+         <div class="overlay">
+           <div class="image-content">
+             <div class="card-image">
+               <img src="${CONFIG.BASE_IMAGE_URL + result.id}" alt="${
+  result.name || '-'
+}"class="card-img" />
+             </div>
+           </div>
+         </div>
+         <div class="card-content">
+           <h2 class="name"><a href="${`/#/detail-recipes/${result.name}`}">${
+  result.name || '-'
+}</a></h2>
+           <p class="description">${result.desc}</p>
+
+           <button class="button"><a href="${`/#/detail-recipes/${result.name}`}">View More</a></button>
+         </div>
+         
+       </div>
+       
+`;
+
 const createRegionItemTemplate = (result) => `
         <div class="result-item">
           <div class="result-item-header">
@@ -106,6 +130,7 @@ export {
   createRecipeItemTemplate,
   createRecipesDetailTemplate,
   createRegionItemTemplate,
+  createRecipeFavoriteTemplate,
   createDetailRegionTemplate,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
