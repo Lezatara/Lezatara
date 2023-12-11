@@ -113,6 +113,36 @@ const createDetailRegionTemplate = (result) => `
 </div>
 
 `;
+const createReviewFormTemplate = () => `
+    <div class="col">
+        <div class="review-form">
+            <h3>Tambah Ulasan</h3>
+            <form id="reviewForm">
+                <div class="form-group">
+                    <label for="inputName">Nama</label>
+                    <input type="text" id="inputName" name="review-name" class="form-control" required placeholder="Masukkan nama (Maks 16 karakter)">
+                </div>
+                <div class="form-group">
+                    <label for="inputReview">Isi Review</label>
+                    <textarea id="inputReview" name="review-content" class="form-control" required placeholder="Masukkan isi review"></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+        </div>
+    </div>
+`;
+
+const createReviewViewTemplate = (result) => `
+        <div class="review-item">
+            <div class="review-header">
+                <span class="review-name">${result.nama}</span>
+                <span class="review-date">(${result.tanggal})</span>
+            </div>
+            <div class="review-body">
+                <p>${result.isi_review}</p>
+            </div>
+        </div>
+`;
 
 const createLikeButtonTemplate = () => `
   <button aria-label="like this recipe" id="likeButton" class="like">
@@ -134,4 +164,6 @@ export {
   createDetailRegionTemplate,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
+  createReviewFormTemplate,
+  createReviewViewTemplate,
 };
