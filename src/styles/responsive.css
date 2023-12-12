@@ -17,6 +17,39 @@
   .search-form input[type="search"] {
     font-size: 0.9rem;
   }
+  
+  /*navigation*/
+  #navigationDrawer {
+    height: 10vh;
+    width: 100%;
+    flex-direction: column;
+    transform: translateY(-100vh);
+    padding: 30px; /* Tambahkan padding untuk batas kiri dan kanan */
+    box-sizing: border-box; /* Pastikan padding tidak mempengaruhi lebar dan tinggi */
+  }
+
+  #navigationDrawer.open {
+    transform: translateY(-80px);
+  }
+
+  #hamburgerButton {
+    display: block; /* Show hamburger button on mobile */
+  }
+
+  #navigationDrawer ul {
+    list-style-type: none;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+
+  #navigationDrawer a {
+    font-size: 10px; /* Adjust font size for mobile */
+    border-bottom: none; /* Remove border bottom */
+  }
+
+  #navigationDrawer a:hover {
+    border-bottom: none; /* Remove border bottom on hover */
+  }
 
   /*home*/
   .hero {
@@ -33,9 +66,11 @@
     font-size: 18px;
   }
 
-  .image-hero {
-    height: 200px;
-    width: 250px;
+  .image-hero .img-hero {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
   }
 
   .content {
@@ -142,6 +177,25 @@
   .ingredients-list li,
   .result-steps li {
     margin-bottom: 5px;
+  }
+  /* MULAI DARI SINI YAA BROOO SAMPAI .region */
+  /* page recipes */
+  .islands {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .result-item {
+    flex-grow: 3;
+    flex-basis: 200;
+  }
+
+  /* detail region */
+
+  .region {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
   }
 
   /*about*/

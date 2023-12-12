@@ -74,13 +74,13 @@ const Recipes = {
         `;
   },
 
-  async afterRender() {
-    const regionals = await TheRecipesSource.ListRegion();
-    const recipesContainer = document.querySelector('#regions');
-    regionals.forEach((result) => {
-      recipesContainer.innerHTML += createRegionItemTemplate(result);
-    });
-  },
+  // async afterRender() {
+  //   const regionals = await TheRecipesSource.ListRegion();
+  //   const recipesContainer = document.querySelector('#regions');
+  //   regionals.forEach((result) => {
+  //     recipesContainer.innerHTML += createRegionItemTemplate(result);
+  //   });
+  // },
 };
 
 export default Recipes;
