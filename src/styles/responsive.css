@@ -20,35 +20,44 @@
   
   /*navigation*/
   #navigationDrawer {
-    height: 10vh;
+    transform: translateY(-100%); /* Sembunyikan menu saat awalnya */
+    transition: transform 0.5s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 20%;
     width: 100%;
-    flex-direction: column;
-    transform: translateY(-100vh);
-    padding: 30px; /* Tambahkan padding untuk batas kiri dan kanan */
-    box-sizing: border-box; /* Pastikan padding tidak mempengaruhi lebar dan tinggi */
+    background: #ef9595;
+    z-index: 99;
+    padding: 20px 0;
   }
 
   #navigationDrawer.open {
-    transform: translateY(-80px);
+    transform: translateY(0);
   }
 
   #hamburgerButton {
-    display: block; /* Show hamburger button on mobile */
+    display: block; /* Tampilkan tombol hamburger di mobile */
   }
 
+  /* Tambahkan gaya untuk menyembunyikan menu saat tombol hamburger diklik */
   #navigationDrawer ul {
-    list-style-type: none;
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
+    display: none;
   }
 
+  /* Tampilkan menu ketika tombol hamburger diklik */
+  #navigationDrawer.open ul {
+    display: block;
+  }
+
+  /* Tambahkan gaya lainnya untuk tata letak dan tampilan navigasi di perangkat mobile */
   #navigationDrawer a {
-    font-size: 10px; /* Adjust font size for mobile */
-    border-bottom: none; /* Remove border bottom */
+    font-size: 14px;
+    /* Sesuaikan gaya sesuai kebutuhan untuk tampilan mobile */
   }
-
-  #navigationDrawer a:hover {
-    border-bottom: none; /* Remove border bottom on hover */
+  #navigationDrawer a:active {
+    color: #fff5e0;
+    border-bottom: 5px solid #fff5e0;
   }
 
   /*home*/
