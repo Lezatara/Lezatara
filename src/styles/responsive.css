@@ -17,7 +17,7 @@
   .search-form input[type="search"] {
     font-size: 0.9rem;
   }
-  
+
   /*navigation*/
   #navigationDrawer {
     transform: translateY(-100%); /* Sembunyikan menu saat awalnya */
@@ -108,8 +108,10 @@
   }
 
   .card {
-    flex: 0 0 100%;
-    margin-bottom: 15px;
+    /* flex: 0 0 100%;
+    margin-bottom: 15px; */
+
+    flex: 0 0 calc(100% - 20px);
   }
 
   .card-image {
@@ -313,7 +315,7 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 1200px) {
   .members {
     grid-template-columns: repeat(5, 1fr); /* Dua anggota per baris */
   }

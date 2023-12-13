@@ -1,5 +1,5 @@
-import FavoriteRecipeIdb from '../../data/favorite-recipe-idb';
-import { createRecipeFavoriteTemplate } from '../templates/template-creator';
+import FavoriteRecipeIdb from "../../data/favorite-recipe-idb";
+import { createRecipeFavoriteTemplate } from "../templates/template-creator";
 
 const Favorite = {
   async render() {
@@ -22,8 +22,8 @@ const Favorite = {
 
   async afterRender() {
     const recipes = await FavoriteRecipeIdb.getAllRecipe();
-    const recipesContainer = document.querySelector('#card-wrapper');
-
+    const recipesContainer = document.querySelector("#card-wrapper");
+    console.log(recipes);
     recipes.forEach((result) => {
       recipesContainer.innerHTML += createRecipeFavoriteTemplate(result);
     });

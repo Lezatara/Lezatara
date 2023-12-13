@@ -1,6 +1,6 @@
-import UrlParser from '../../routes/url-parser';
-import { createDetailRegionTemplate } from '../templates/template-creator';
-import TheRecipesSource from '../../data/therecipes-source';
+import UrlParser from "../../routes/url-parser";
+import { createDetailRegionTemplate } from "../templates/template-creator";
+import TheRecipesSource from "../../data/therecipes-source";
 
 const DetailRegions = {
   async render() {
@@ -14,8 +14,8 @@ const DetailRegions = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const detailRegion = await TheRecipesSource.DetailRegion(url.regional);
-    const recipesContainer = document.querySelector('#region');
+    const detailRegion = await TheRecipesSource.DetailRegion(url.name);
+    const recipesContainer = document.querySelector("#region");
     detailRegion.forEach((result) => {
       recipesContainer.innerHTML += createDetailRegionTemplate(result);
     });

@@ -4,6 +4,10 @@ body {
   background-color: #fff5e0;
 }
 
+#mainContent {
+  scroll-behavior: smooth;
+}
+
 .app-bar {
   position: sticky;
   top: 0;
@@ -199,16 +203,19 @@ body {
 .slide-container {
   width: 100%;
   height: 100%;
-  padding-bottom: 35px;
+  /* padding-bottom: 35px; */
 }
 .card-wrapper {
-  gap: 50px;
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .slide-content {
   padding: 20px;
   width: 90%;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .image-content,
@@ -220,7 +227,7 @@ body {
 }
 
 .card {
-  flex: 0 0 calc((100% - 3 * 20px) / 4);
+  flex: 0 0 calc((100% - 3 * 15px) / 3);
   border-radius: 25px;
   background-color: #fff5e0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

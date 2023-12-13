@@ -1,5 +1,5 @@
-import API_ENDPOINT from '../globals/api-endpoint'; // Sesuaikan path sesuai struktur folder Anda
-import CONFIG from '../globals/config';
+import API_ENDPOINT from "../globals/api-endpoint"; // Sesuaikan path sesuai struktur folder Anda
+import CONFIG from "../globals/config";
 
 const searchRecipes = async (searchTerm) => {
   try {
@@ -28,39 +28,22 @@ const searchRecipes = async (searchTerm) => {
 
     return formattedResults;
   } catch (error) {
-    console.error('Error fetching recipes:', error);
+    console.error("Error fetching recipes:", error);
     return [];
   }
 };
 
 // Fungsi untuk menampilkan hasil pencarian di dalam elemen HTML
 const displaySearchResults = (results) => {
-  const mainContent = document.getElementById('mainContent');
-  mainContent.innerHTML = ''; // Kosongkan konten utama sebelum menambahkan hasil pencarian
+  const mainContent = document.getElementById("mainContent");
+  mainContent.innerHTML = ""; // Kosongkan konten utama sebelum menambahkan hasil pencarian
 
   // Loop melalui hasil pencarian dan tambahkan ke dalam elemen HTML
   results.forEach((result) => {
-    const resultElement = document.createElement('div');
+    const resultElement = document.createElement("div");
     resultElement.innerHTML = `
     <div class="result">
-    <h2 class="result-name">${result.name}</h2>
-    <img class="result-picture" src="${CONFIG.BASE_IMAGE_URL + result.id}" alt="${
-      result.name
-    }"/>
-      <div class="result-description">
-        <h3>Deskripsi</h3>
-        <p>${result.desc}</p>
-      </div>
-      <div class="result-info">
-        <h3>Bahan-bahan</h3>
-        <ul class="ingredients-list">
-          ${result.ingredients.map((ingredient) => `<li>${ingredient.bahan} - ${ingredient.jumlah}</li>`).join('')}
-        </ul>
-        <h3>Langkah-langkah</h3>
-        <ol class="result-steps">
-          ${result.receipt.map((step) => `<li>${step}</li>`).join('')}
-        </ol>
-      </div>
+    <h2 class="name"><a href="${`/#/detail-recipes/${result.name}`}">${result.name || "-"}</a></h2>
     </div>
     `;
 
@@ -68,11 +51,9 @@ const displaySearchResults = (results) => {
   });
 };
 
-
-
 // Tambahkan event listener untuk menanggapi input di kotak pencarian
-const searchBox = document.querySelector('.search-form input');
-searchBox.addEventListener('input', (event) => {
+const searchBox = document.querySelector(".search-form input");
+searchBox.addEventListener("input", (event) => {
   // Panggil fungsi pencarian saat pengguna memasukkan input
   const searchTerm = event.target.value;
   searchRecipes(searchTerm);
