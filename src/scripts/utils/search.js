@@ -1,4 +1,5 @@
 import API_ENDPOINT from '../globals/api-endpoint'; // Sesuaikan path sesuai struktur folder Anda
+import CONFIG from '../globals/config';
 
 const searchRecipes = async (searchTerm) => {
   try {
@@ -41,17 +42,26 @@ const displaySearchResults = (results) => {
   results.forEach((result) => {
     const resultElement = document.createElement('div');
     resultElement.innerHTML = `
-      <h2>${result.name}</h2>
-      <img src="${API_ENDPOINT.BASE_IMAGE_URL}${result.idPicture}" alt="${result.name}" />
-      <p>${result.desc}</p>
-      <h3>Ingredients:</h3>
-      <ul>
-        ${result.ingredients.map((ingredient) => `<li>${ingredient.bahan} - ${ingredient.jumlah}</li>`).join('')}
-      </ul>
-      <h3>Recipe:</h3>
-      <ol>
-        ${result.receipt.map((step) => `<li>${step}</li>`).join('')}
-      </ol>
+    <div class="result">
+    <h2 class="result-name">${result.name}</h2>
+    <img class="result-picture" src="${CONFIG.BASE_IMAGE_URL + result.id}" alt="${
+      result.name
+    }"/>
+      <div class="result-description">
+        <h3>Deskripsi</h3>
+        <p>${result.desc}</p>
+      </div>
+      <div class="result-info">
+        <h3>Bahan-bahan</h3>
+        <ul class="ingredients-list">
+          ${result.ingredients.map((ingredient) => `<li>${ingredient.bahan} - ${ingredient.jumlah}</li>`).join('')}
+        </ul>
+        <h3>Langkah-langkah</h3>
+        <ol class="result-steps">
+          ${result.receipt.map((step) => `<li>${step}</li>`).join('')}
+        </ol>
+      </div>
+    </div>
     `;
 
     mainContent.appendChild(resultElement);
