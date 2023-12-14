@@ -4,7 +4,7 @@ import "../styles/responsive.css";
 import "../styles/swiper-bundle.min.css";
 
 import Swiper from "swiper";
-import { initializeSearch } from "./utils/search.js";
+import searchRecipes from "./utils/search.js";
 import App from "./views/app";
 import swRegister from "./utils/sw-register";
 
@@ -41,5 +41,5 @@ var swiper = new Swiper(".slide-content", {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  initializeSearch();
+  searchRecipes();
 });

@@ -23,7 +23,7 @@ const Favorite = {
   async afterRender() {
     const recipes = await FavoriteRecipeIdb.getAllRecipe();
     const recipesContainer = document.querySelector("#card-wrapper");
-    console.log(recipes);
+
     recipes.forEach((result) => {
       recipesContainer.innerHTML += createRecipeFavoriteTemplate(result);
     });
