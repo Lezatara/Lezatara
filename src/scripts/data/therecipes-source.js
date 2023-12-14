@@ -24,6 +24,18 @@ class TheRecipesSource {
     const responseJson = await response.json();
     return responseJson.result;
   }
+
+  static async GetReview(id) {
+    const response = await fetch(API_ENDPOINT.GET_REVIEW(id));
+    const responseJson = await response.json();
+    return responseJson.result;
+  }
+
+  static async PostReview(id) {
+    const response = await fetch(API_ENDPOINT.POST_REVIEW(id));
+    const responseJson = await response.json();
+    return responseJson.result;
+  }
 }
 
 export default TheRecipesSource;

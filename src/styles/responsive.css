@@ -14,7 +14,7 @@
     max-width: 50vw;
   }
 
-  .search-form input[type="search"] {
+  .search-form input[type='search'] {
     font-size: 0.9rem;
   }
 
@@ -189,7 +189,7 @@
   .result-steps li {
     margin-bottom: 5px;
   }
-  /* MULAI DARI SINI YAA BROOO SAMPAI .region */
+
   /* page recipes */
   .islands {
     display: flex;
@@ -315,7 +315,7 @@
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1200px) {
   .members {
     grid-template-columns: repeat(5, 1fr); /* Dua anggota per baris */
   }
