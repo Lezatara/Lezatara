@@ -1,6 +1,6 @@
-import UrlParser from '../../routes/url-parser';
-import { createReviewViewTemplate } from '../templates/template-creator';
-import TheRecipesSource from '../../data/therecipes-source';
+import UrlParser from "../../routes/url-parser";
+import { createReviewViewTemplate } from "../templates/template-creator";
+import TheRecipesSource from "../../data/therecipes-source";
 
 const Review = {
   async render() {
@@ -28,37 +28,86 @@ const Review = {
 </div>
       `;
   },
+
   async afterRender() {
+    await this.showReviews();
+    const submitButton = document.getElementById("submit-review");
+    submitButton.addEventListener("click", this.submitReview.bind(this));
+    this.showSavedReviews();
+  },
+
+  async showReviews() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const getReview = await TheRecipesSource.GetReview(url.name);
 
-    const reviewContainer = document.querySelector('#review');
-    getReview.forEach((result) => {
+    const reviewContainer = document.querySelector("#review");
+
+    if (Array.isArray(getReview)) {
+      getReview.forEach((result) => {
+        reviewContainer.innerHTML += createReviewViewTemplate(result);
+      });
+    } else {
+      console.error("Data reviews is not an array:", getReview);
+    }
+  },
+
+  async submitReview(event) {
+    event.preventDefault();
+
+    const nameInput = document.getElementById("name-input").value;
+    const reviewInput = document.getElementById("review-input").value;
+
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const reviewId = url.name; // Ambil ID dari URL
+
+    await TheRecipesSource.PostReview(reviewId, { name: nameInput, review: reviewInput });
+    this.saveReview({ id: reviewId, nama: nameInput, isi_review: reviewInput });
+
+    // Menampilkan ulasan di halaman tanpa harus me-reload halaman
+    const reviewContainer = document.querySelector("#review");
+    reviewContainer.innerHTML += createReviewViewTemplate({
+      nama: nameInput,
+      isi_review: reviewInput,
+      tanggal: new Date().toLocaleDateString("en-US", { timeZone: "Asia/Singapore" }),
+    });
+
+    // Mengosongkan nilai input setelah submit
+    document.getElementById("name-input").value = "";
+    document.getElementById("review-input").value = "";
+  },
+
+  // Menyimpan review ke localStorage
+  saveReview(review) {
+    const savedReviews = JSON.parse(localStorage.getItem("savedReviews")) || [];
+    savedReviews.push(review);
+    localStorage.setItem("savedReviews", JSON.stringify(savedReviews));
+  },
+
+  // Menampilkan review yang disimpan di localStorage
+  showSavedReviews() {
+    const savedReviews = JSON.parse(localStorage.getItem("savedReviews")) || [];
+    const reviewContainer = document.querySelector("#review");
+
+    // Hanya tampilkan review yang sesuai dengan ID yang sedang aktif
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const activeId = url.name;
+
+    savedReviews
+      .filter((review) => review.id === activeId)
+      .forEach((result) => {
+        reviewContainer.innerHTML += createReviewViewTemplate(result);
+      });
+  },
+
+  // Menampilkan review yang disimpan di localStorage
+  showSavedReviews() {
+    const savedReviews = JSON.parse(localStorage.getItem("savedReviews")) || [];
+    const reviewContainer = document.querySelector("#review");
+
+    savedReviews.forEach((result) => {
       reviewContainer.innerHTML += createReviewViewTemplate(result);
     });
-
-    const submitButton = document.getElementById('submit-review');
-    submitButton.addEventListener('click', this.submitReview.bind(this));
-  },
-
-  submitReview() {
-    const nameInput = document.getElementById('name-input').value;
-    const reviewInput = document.getElementById('review-input').value;
-
-    console.log('Name:', nameInput);
-    console.log('Review:', reviewInput);
-
-    const reviewContainer = document.querySelector('#review');
-
-    reviewContainer.innerHTML += createReviewViewTemplate({
-      Name: nameInput,
-      Review: reviewInput,
-    });
-
-    document.getElementById('name-input').value = '';
-    document.getElementById('review-input').value = '';
-
-    // Logika pengiriman ulasan ke server atau yang sesuai dengan kebutuhan aplikasi Anda
   },
 };
+
 export default Review;

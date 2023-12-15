@@ -1,4 +1,4 @@
-import API_ENDPOINT from '../globals/api-endpoint';
+import API_ENDPOINT from "../globals/api-endpoint";
 
 class TheRecipesSource {
   static async ListRecipe() {
@@ -31,8 +31,15 @@ class TheRecipesSource {
     return responseJson.result;
   }
 
-  static async PostReview(id) {
-    const response = await fetch(API_ENDPOINT.POST_REVIEW(id));
+  static async PostReview(id, data) {
+    const response = await fetch(API_ENDPOINT.POST_REVIEW(id), {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
     const responseJson = await response.json();
     return responseJson.result;
   }

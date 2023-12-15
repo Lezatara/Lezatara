@@ -1,10 +1,8 @@
-import CONFIG from '../../globals/config';
+import CONFIG from "../../globals/config";
 
 const createRecipesDetailTemplate = (result) => `
 <h2 class="result-name">${result.name}</h2>
-  <img class="result-picture" src="${CONFIG.BASE_IMAGE_URL + result.id}" alt="${
-  result.name
-}"/>
+  <img class="result-picture" src="${CONFIG.BASE_IMAGE_URL + result.id}" alt="${result.name}"/>
   <div class="result-description">
     <h3>Deskripsi</h3>
     <p>${result.desc}</p>
@@ -13,13 +11,11 @@ const createRecipesDetailTemplate = (result) => `
   <div class="result-info">
   <h3>Bahan-bahan</h3>
   <ul class="ingredients-list">
-  ${result.ingredients
-    .map((ingredient) => ` <li>${ingredient.bahan}: ${ingredient.jumlah}</li>`)
-    .join('')}
+  ${result.ingredients.map((ingredient) => ` <li>${ingredient.bahan}: ${ingredient.jumlah}</li>`).join("")}
 </ul>
   <h3>Langkah-langkah</h3>
     <ol class="result-steps">
-      ${result.receipt.map((receipts) => `<li>${receipts}</li>`).join('')}
+      ${result.receipt.map((receipts) => `<li>${receipts}</li>`).join("")}
     </ol>
   </div>
   `;
@@ -29,16 +25,12 @@ const createRecipeItemTemplate = (result) => `
          <div class="overlay">
            <div class="image-content">
              <div class="card-image">
-               <img src="${CONFIG.BASE_IMAGE_URL + result.id}" alt="${
-  result.name || '-'
-}"class="card-img" />
+               <img src="${CONFIG.BASE_IMAGE_URL + result.id}" alt="${result.name || "-"}"class="card-img" />
              </div>
            </div>
          </div>
          <div class="card-content">
-           <h2 class="name"><a href="${`/#/detail-recipes/${result.name}`}">${
-  result.name || '-'
-}</a></h2>
+           <h2 class="name"><a href="${`/#/detail-recipes/${result.name}`}">${result.name || "-"}</a></h2>
            <p class="description">${result.desc}</p>
            <button class="button"><a href="${`/#/detail-recipes/${result.name}`}">View More</a></button>
          </div>
@@ -50,16 +42,12 @@ const createRecipeFavoriteTemplate = (result) => `
          <div class="overlay">
            <div class="image-content">
              <div class="card-image">
-               <img src="${CONFIG.BASE_IMAGE_URL + result.picture}" alt="${
-  result.name || '-'
-}"class="card-img" />
+               <img src="${CONFIG.BASE_IMAGE_URL + result.picture}" alt="${result.name || "-"}"class="card-img" />
              </div>
            </div>
          </div>
          <div class="card-content">
-           <h2 class="name"><a href="${`/#/detail-recipes/${result.name}`}">${
-  result.title || '-'
-}</a></h2>
+           <h2 class="name"><a href="${`/#/detail-recipes/${result.name}`}">${result.title || "-"}</a></h2>
            <p class="description">${result.desc}</p>
            <button class="button"><a href="${`/#/detail-recipes/${result.name}`}">View More</a></button>
          </div>
@@ -71,9 +59,7 @@ const createRegionItemTemplate = (result) => `
           <div class="result-item-header">
             </div>
         <div class="result-content">
-          <h2 class="name"><a href="${`/#/detail-regions/${result}`}">${
-  result || '-'
-}</a></h2>
+          <h2 class="name"><a href="${`/#/detail-regions/${result}`}">${result || "-"}</a></h2>
           <p class="description">${result.desc}</p>
           <button class="button"><a href="${`/#/detail-regions/${result.regional}`}">Lihat Masakan</a></button>
         </div>
@@ -84,13 +70,9 @@ const createRegionItemTemplate = (result) => `
 const createDetailRegionTemplate = (result) => `
     <div class="contentDetail">
         <div class="result-item-region">
-        <img class="result-item-picture-region" src="${
-          CONFIG.BASE_IMAGE_URL + result.id
-        }" alt="${result.name}"/>
+        <img class="result-item-picture-region" src="${CONFIG.BASE_IMAGE_URL + result.id}" alt="${result.name}"/>
           <div class="result-content-region">
-          <h2 class="name"><a href="${`/#/detail-recipes/${result.name}`}">${
-  result.name || '-'
-}</a></h2>
+          <h2 class="name"><a href="${`/#/detail-recipes/${result.name}`}">${result.name || "-"}</a></h2>
           <p class="description">${result.desc}</p>
         
           <button class="button"><a href="${`/#/detail-recipes/${result.name}`}">View More</a></button>
