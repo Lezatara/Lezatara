@@ -7,7 +7,7 @@ import FavoriteRecipeIdb from "../../data/favorite-recipe-idb";
 const DetailRecipes = {
   async render() {
     return `
-    <h2 class="title" >Detail Recipe</h2>
+    <h2 class="title" >Detail Resep</h2>
    <div id="result" class="result"></div>
    <div id="likeButtonContainer"></div>
     

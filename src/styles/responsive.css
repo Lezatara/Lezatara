@@ -176,6 +176,7 @@
 
   .ingredients-list {
     list-style-type: none;
+    margin-right: 70px;
     padding: 0;
   }
 
@@ -201,8 +202,15 @@
     flex-basis: 200;
   }
 
-  /* detail region */
+  /*like*/
+  .like {
+    width: 45px;
+    height: 45px;
+    font-size: 16px;
+    right: 72px;
+  }
 
+  /* detail region */
   .region {
     display: flex;
     flex-wrap: wrap;

@@ -6,7 +6,7 @@ const Favorite = {
     return `
     <main id="mainContent">
     <section class="content">
-    <h2 class="title" tabindex="0">Your Favorite Recipe</h2>
+    <h2 class="title" tabindex="0">Resep Favorit Anda</h2>
   </section>
   <div class="slide-container swiper">
   <div class="slide-content">

@@ -160,9 +160,13 @@ body {
 }
 
 .content {
+  flex: 1;
+}
+
+.wrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .blog {
@@ -205,10 +209,12 @@ body {
   height: 100%;
   /* padding-bottom: 35px; */
 }
+
 .card-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: center;
 }
 
 .slide-content {
@@ -232,6 +238,7 @@ body {
   background-color: #fff5e0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 25px 25px 0 25px;
+  align-items: center;
 }
 
 .image-content {
@@ -307,6 +314,7 @@ body {
 .button a:hover {
   color: #fff5e0;
 }
+
 /**/
 .result {
   margin: 0 auto;
@@ -371,7 +379,6 @@ body {
 }
 
 /* recipes-page */
-
 .contentDetail {
   margin: 0 auto;
   min-height: 100%;
@@ -479,7 +486,7 @@ body {
   margin-top: 10px; /* Mengatur jarak antara teks dan tombol */
 }
 
-/**/
+/*footer*/
 .footer {
   display: flex;
   justify-content: space-between;
@@ -489,6 +496,9 @@ body {
   font-family: 'Rubik', sans-serif;
   font-weight: bold;
   font-size: 12px;
+  position: relative;
+  width: 90%;
+  bottom: 0;
 }
 
 .contact {
@@ -528,7 +538,7 @@ body {
 
 .members {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tiga anggota per baris */
+  grid-template-columns: repeat(5, 1fr); /* Tiga anggota per baris */
   grid-gap: 20px;
   padding: 20px;
 }
@@ -675,6 +685,7 @@ body {
   font-size: 18px;
   color: white;
   cursor: pointer;
+  z-index: 99;
 }
 
 /* DETAIL REVIEW */
