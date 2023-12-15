@@ -41,7 +41,7 @@ body {
   background-color: white;
 }
 
-.search-form input[type="search"] {
+.search-form input[type='search'] {
   width: 30vw;
   margin-left: 0rem;
   margin-right: 1rem;
@@ -50,7 +50,7 @@ body {
   color: hsl(252, 30%, 17%);
   border: none;
   border-radius: 0.5rem;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 .search-form .fas.fa-search {
@@ -74,12 +74,12 @@ body {
 .hero h1 {
   font-size: 60px;
   font-weight: bold;
-  font-family: "Quicksand", serif;
+  font-family: 'Quicksand', serif;
   margin-bottom: 20px;
 }
 
 .hero h2 {
-  font-family: "Montserrat", serif;
+  font-family: 'Montserrat', serif;
   font-size: 25px;
   margin-bottom: 20px;
 }
@@ -122,12 +122,9 @@ body {
   margin: 0; /* Remove default margin */
 }
 
-#navigationDrawer li {
-  margin-bottom: 10px; /* Adjust spacing between menu items */
-}
-
 #navigationDrawer a {
-  font-family: "Quicksand", serif;
+  margin-top: 10px;
+  font-family: 'Quicksand', serif;
   text-decoration: none;
   font-size: 30px;
   font-weight: bolder;
@@ -136,12 +133,12 @@ body {
   transition-duration: 300ms;
   border-bottom: 1px solid #ffcb0e00;
   display: block; /* Ensure each link takes full width */
+  align-items: center;
   padding: 10px; /* Add padding for better touch/click experience */
 }
 
 #navigationDrawer a:hover {
   color: #fff5e0;
-  border-bottom: 5px solid #fff5e0;
 }
 
 #hamburgerButton {
@@ -177,7 +174,7 @@ body {
 
 .blog > div {
   width: 100%;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 23px;
   color: #000000;
 }
@@ -188,16 +185,44 @@ body {
   height: 150px;
   background-color: #ed7b7b;
 }
-
 .blog p {
   width: 100%;
   margin: 0 auto;
   font-size: 14px;
   line-height: 1.5;
 }
+.blogs {
+  display: inline;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2%;
+}
+
+.blogs > div {
+  width: 100%;
+  font-family: 'Rubik', sans-serif;
+  font-size: 23px;
+  color: #000000;
+}
+
+.blogs > img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.blogs p {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1;
+  text-align: center;
+  background-color: #ed7b7b;
+}
 
 .title {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: xx-large;
   padding-top: 40px;
   font-weight: bold;
@@ -242,7 +267,6 @@ body {
   background-color: #fff5e0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 25px 25px 0 25px;
-  
 }
 
 .image-content {
@@ -275,7 +299,7 @@ body {
 }
 
 .name a {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 18px;
   font-weight: bold;
   color: #000000;
@@ -283,7 +307,7 @@ body {
 }
 
 .description {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 14px;
   color: #000000;
   text-align: center;
@@ -303,7 +327,7 @@ body {
   margin: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 .button:hover {
@@ -495,7 +519,7 @@ body {
   align-items: center;
   padding: 5px 5%;
   background-color: #ef9595;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: bold;
   font-size: 12px;
 }
@@ -506,7 +530,7 @@ body {
 
 .contact h2 {
   font-size: 14px;
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-weight: bold;
 }
 
@@ -645,7 +669,19 @@ body {
 
 .social-links .fab.fa-instagram:hover {
   filter: none; /* Menghapus filter grayscale saat dihover */
-  background: linear-gradient(to right, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80); /* Warna latar belakang Instagram (gradient warna asli) */
+  background: linear-gradient(
+    to right,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d,
+    #f56040,
+    #f77737,
+    #fcaf45,
+    #ffdc80
+  ); /* Warna latar belakang Instagram (gradient warna asli) */
   color: #ffffff; /* Warna ikon (putih) saat dihover */
 }
 

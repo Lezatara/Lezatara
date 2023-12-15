@@ -1,7 +1,7 @@
 {
   "id": "recipe-catalogue-lite-pwa-1",
   "start_url": "./index.html",
-  "name": "Recipe Catalogue Lite",
+  "name": "Lezatara",
   "short_name": "Recipe Lite",
   "description": "Free Catalogue Recipe for you",
   "display": "standalone",
