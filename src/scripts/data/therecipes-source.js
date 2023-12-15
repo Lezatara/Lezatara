@@ -26,22 +26,32 @@ class TheRecipesSource {
   }
 
   static async GetReview(id) {
-    const response = await fetch(API_ENDPOINT.GET_REVIEW(id));
-    const responseJson = await response.json();
-    return responseJson.result;
+    try {
+      const response = await fetch(API_ENDPOINT.GET_REVIEW(id));
+      const responseJson = await response.json();
+      return responseJson.result;
+    } catch (error) {
+      console.error("Error fetching reviews:", error);
+      throw error; // Throw the error again to handle it in the calling code
+    }
   }
 
   static async PostReview(id, data) {
-    const response = await fetch(API_ENDPOINT.POST_REVIEW(id), {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+    try {
+      const response = await fetch(API_ENDPOINT.POST_REVIEW(id), {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-    const responseJson = await response.json();
-    return responseJson.result;
+      const responseJson = await response.json();
+      return responseJson.result;
+    } catch (error) {
+      console.error("Error posting review:", error);
+      throw new Error("Failed to post review");
+    }
   }
 }
 

@@ -41,7 +41,7 @@ body {
   background-color: white;
 }
 
-.search-form input[type='search'] {
+.search-form input[type="search"] {
   width: 30vw;
   margin-left: 0rem;
   margin-right: 1rem;
@@ -50,7 +50,7 @@ body {
   color: hsl(252, 30%, 17%);
   border: none;
   border-radius: 0.5rem;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .search-form .fas.fa-search {
@@ -74,12 +74,12 @@ body {
 .hero h1 {
   font-size: 60px;
   font-weight: bold;
-  font-family: 'Quicksand', serif;
+  font-family: "Quicksand", serif;
   margin-bottom: 20px;
 }
 
 .hero h2 {
-  font-family: 'Montserrat', serif;
+  font-family: "Montserrat", serif;
   font-size: 25px;
   margin-bottom: 20px;
 }
@@ -91,7 +91,6 @@ body {
   background: #ed7b7b;
   padding: 9px;
   overflow: hidden;
-  margin-bottom: 20px;
 }
 
 .image-hero .img-hero {
@@ -102,7 +101,7 @@ body {
 }
 
 #navigationDrawer {
-  height: 70px;
+  height: 80px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -130,7 +129,7 @@ body {
 }
 
 #navigationDrawer a {
-  font-family: 'Quicksand', serif;
+  font-family: "Quicksand", serif;
   text-decoration: none;
   font-size: 30px;
   font-weight: bolder;
@@ -161,8 +160,8 @@ body {
 
 .content {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .blog {
@@ -176,7 +175,7 @@ body {
 
 .blog > div {
   width: 100%;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 23px;
   color: #000000;
 }
@@ -196,8 +195,10 @@ body {
 }
 
 .title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: xx-large;
+  padding-top: 40px;
+  font-weight: bold;
 }
 
 .slide-container {
@@ -218,8 +219,8 @@ body {
   margin: 0 auto;
 }
 
-.image-content,
-.card-content {
+.image-content-recipe,
+.card-content-recipe {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -227,6 +228,11 @@ body {
 }
 
 .card {
+  border-radius: 0.85rem;
+  background-color: #fff5e0;
+}
+
+.card-recipe {
   flex: 0 0 calc((100% - 3 * 15px) / 3);
   border-radius: 25px;
   background-color: #fff5e0;
@@ -264,7 +270,7 @@ body {
 }
 
 .name a {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: bold;
   color: #000000;
@@ -272,7 +278,7 @@ body {
 }
 
 .description {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 14px;
   color: #000000;
   text-align: center;
@@ -292,7 +298,7 @@ body {
   margin: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .button:hover {
@@ -486,7 +492,7 @@ body {
   align-items: center;
   padding: 5px 5%;
   background-color: #ef9595;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: bold;
   font-size: 12px;
 }
@@ -528,7 +534,7 @@ body {
 
 .members {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tiga anggota per baris */
+  grid-template-columns: repeat(5, 1fr); /* Tiga anggota per baris */
   grid-gap: 20px;
   padding: 20px;
 }
@@ -634,19 +640,7 @@ body {
 
 .social-links .fab.fa-instagram:hover {
   filter: none; /* Menghapus filter grayscale saat dihover */
-  background: linear-gradient(
-    to right,
-    #405de6,
-    #5851db,
-    #833ab4,
-    #c13584,
-    #e1306c,
-    #fd1d1d,
-    #f56040,
-    #f77737,
-    #fcaf45,
-    #ffdc80
-  ); /* Warna latar belakang Instagram (gradient warna asli) */
+  background: linear-gradient(to right, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80); /* Warna latar belakang Instagram (gradient warna asli) */
   color: #ffffff; /* Warna ikon (putih) saat dihover */
 }
 
@@ -720,56 +714,24 @@ body {
   text-align: left;
 }
 
-/* FORM */
-form {
-  margin: 2em 0;
-  padding: 50px;
-  border: 3px dotted #ed7b7b;
-  border-radius: 0 15px 0 15px;
-}
-
-.form-control {
-  display: block;
-  width: 100%;
-  min-height: 1em;
-  padding: 15px 15px 15px 15px;
-  font-size: 1em;
-  font-weight: normal;
-  color: black;
-  background-color: #fff;
-  appearance: none;
-  outline: none;
-  border: 1px solid transparent;
-  border-bottom: 1px solid #fff5e0;
-}
-
-.form-label {
-  padding-bottom: 10px;
-  font-weight: bold;
-  font-style: normal;
-  font-size: small;
-  color: #ef9595;
-}
-
 .mb-3 {
   margin-bottom: 1.3em;
   margin-top: 0.5em;
 }
 
-.submit-btn {
-  padding: 15px 15px 15px 15px;
-  font-weight: 700;
-  color: white;
-  text-align: center;
-  vertical-align: middle;
-  background-color: #ef9595;
-  border: 1px solid transparent;
-  font-size: large;
-  cursor: pointer;
-  text-decoration: none;
-}
-
 .btn:hover,
 .submit-btn:hover {
+  color: #fff;
   background-color: #ed7b7b;
+}
+
+.btn-primary {
+  background-color: #ed7b7b;
+  color: #000000;
+  border-color: #ed7b7b;
+}
+
+.btn-primary:hover {
+  background-color: #ed7b7b;
+  border-color: #ed7b7b;
 }
