@@ -159,6 +159,10 @@ body {
 }
 
 .content {
+  flex: 1;
+}
+
+.wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -502,7 +506,9 @@ body {
 }
 
 .contact h2 {
-  font-size: 1rem;
+  font-size: 14px;
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
 }
 
 .contact > p {
