@@ -13,7 +13,7 @@
 
 <h2 align="center">Link Lezatara</h2>
 
-<div>
+<div align="center">
  <a href="https://lezatara.netlify.app/" text-align="center" target="_blank">Lezatara</a>
 </div>
 
