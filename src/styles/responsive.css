@@ -1,0 +1,403 @@
+/* Media Queries untuk menyesuaikan border pada layar yang berbeda */
+@media screen and (max-width: 768px) {
+  /*app-bar*/
+  .app-bar {
+    padding: 10px 3%;
+    height: 55px;
+  }
+
+  .app-logo {
+    max-height: 60px;
+  }
+
+  .search-form input {
+    max-width: 50vw;
+  }
+
+  .search-form input[type="search"] {
+    font-size: 0.9rem;
+  }
+
+  /*navigation*/
+  #navigationDrawer {
+    transform: translateY(-100%); /* Sembunyikan menu saat awalnya */
+    transition: transform 0.5s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: auto;
+    width: 100%;
+    background: #ef9595;
+    z-index: 99;
+    padding: 20px 0;
+  }
+
+  #navigationDrawer.open {
+    transform: translateY(55px);
+    padding-top: 0;
+  }
+
+  #hamburgerButton {
+    display: block;
+  }
+
+  #navigationDrawer ul {
+    display: none;
+    padding-bottom: 0;
+  }
+
+  #navigationDrawer.open ul {
+    display: block;
+    border-color: #fff5e0;
+  }
+
+  #navigationDrawer a {
+    margin-top: 5px;
+    display: -moz-box;
+    box-direction: normal;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    color: #000000;
+    border-bottom: 1px solid black;
+  }
+
+  #navigationDrawer a:hover {
+    color: #fff5e0;
+    border-bottom: 5px solid #fff5e0;
+  }
+
+  /*home*/
+  .hero {
+    padding: 8%;
+    height: auto;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero h2 {
+    font-size: 15px;
+  }
+
+  .image-hero .img-hero {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+  }
+
+  .image-hero {
+    height: 250px;
+    width: 400px;
+    border-radius: 40%;
+  }
+
+  .content {
+    padding: 10px; /* Mengurangi padding pada layar kecil */
+  }
+
+  .blog {
+    flex-direction: column; /* Ubah menjadi tata letak kolom */
+    height: auto;
+    padding: 10px;
+    padding-top: 0;
+  }
+
+  .blog > div {
+    width: 100%;
+    margin-bottom: 10px; /* Berikan ruang antara elemen */
+    text-align: center;
+  }
+
+  .blog > img {
+    width: 105%;
+    padding: 0;
+  }
+
+  .blog p {
+    font-size: 14px;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: justify;
+  }
+
+  .blogs p {
+    font-size: 14px;
+
+    text-align: justify;
+  }
+
+  .card {
+    /* flex: 0 0 100%;
+    margin-bottom: 15px; */
+
+    flex: 0 0 calc(100% - 20px);
+  }
+
+  .card-recipe {
+    flex: 0 0 calc(100% - 20px);
+  }
+
+  .card-image {
+    height: 100px;
+    width: 100px;
+  }
+
+  .card-wraper {
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+  }
+
+  .slide-content {
+    padding-left: 20px;
+  }
+
+  .name a {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 12px;
+    -webkit-line-clamp: 2;
+  }
+
+  .button {
+    font-size: 12px;
+    padding: 9px 15px;
+    margin: 6px;
+  }
+
+  /*detail recipe*/
+  .result {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr; /* Menggunakan satu kolom untuk tata letak ponsel */
+    gap: 18px 16px;
+    padding: 32px;
+  }
+
+  .container {
+    padding: 32px;
+    padding-top: 0;
+  }
+
+  .result .result-name {
+    grid-column: 1 / span 1;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .result-picture {
+    height: 100%;
+    width: 83%; /* Lebar gambar 100% untuk mengisi kolom */
+    border-radius: 8px; /* Untuk sudut yang lebih lembut */
+  }
+
+  .result-description {
+    grid-column: 1 / span 1;
+  }
+
+  .result-description h3 {
+    margin: 8px 0;
+  }
+
+  .result-description p {
+    text-align: justify;
+  }
+
+  .result-info h3 {
+    margin: 8px 0;
+  }
+
+  .ingredients-list {
+    list-style-type: none;
+
+    padding: 0;
+  }
+
+  .result-steps {
+    padding-left: 20px;
+    text-align: justify;
+  }
+
+  .ingredients-list li,
+  .result-steps li {
+    margin-bottom: 5px;
+  }
+
+  /* page recipes */
+  .contentDetail > h2 {
+    font-size: 20px;
+  }
+
+  .islands {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    justify-content: center;
+  }
+
+  .result-item {
+    flex-grow: 3;
+    flex-basis: 200;
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+  }
+
+  .result-item-region {
+    width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+  }
+
+  /* detail region */
+  .region {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+    flex-direction: column;
+  }
+
+  /*about*/
+  .about-container > p {
+    text-align: justify;
+  }
+  .members {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .profile-pic {
+    width: 80px;
+    height: 80px;
+  }
+
+  .member {
+    padding: 15px;
+  }
+
+  /*footer*/
+  .footer {
+    padding: 5px 5%;
+    display: flex;
+    align-items: center; /* Pusatkan elemen secara vertikal */
+    justify-content: space-between;
+  }
+
+  .contact > p > img {
+    width: 13%;
+    vertical-align: middle;
+  }
+
+  .trademark {
+    font-weight: bold;
+    font-size: 10px;
+  }
+
+  .contact {
+    font-weight: bold;
+    font-size: 10px;
+  }
+  .contact h2 {
+    font-size: 10px;
+    font-family: "Rubik", sans-serif;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .app-bar {
+    padding: 5px 8%;
+    height: 60px;
+  }
+
+  /*home*/
+  .hero {
+    padding: 1px 12%;
+    height: 350px;
+  }
+
+  .hero h1 {
+    font-size: 50px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+
+  .image-hero {
+    height: 250px;
+    width: 300px;
+  }
+
+  .blog {
+    height: 180px;
+  }
+
+  .blog > img {
+    width: 60%;
+    height: 180px;
+  }
+
+  .content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card-recipe {
+    flex: 0 0 calc((100% - 2 * 20px) / 3);
+  }
+
+  .card-image {
+    height: 120px;
+    width: 120px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 6px 12px;
+    margin: 8px;
+  }
+
+  /*footer*/
+  .footer {
+    padding: 5px 8%;
+  }
+
+  .contact > p > img {
+    width: 12%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* Atur responsifitas untuk lebar layar besar di sini */
+  .hero {
+    padding: 1px 20%;
+  }
+
+  .hero h1 {
+    font-size: 60px;
+  }
+
+  .hero h2 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .members {
+    grid-template-columns: repeat(5, 1fr); /* Dua anggota per baris */
+  }
+}
