@@ -11,8 +11,8 @@
   Pada era globalisasi seperti sekarang ini, masakan Nusantara semakin tidak populer dan kalah oleh pengaruh masakan luar yang berasal dari Negara lain. Di Indonesia masih banyak masyarakat lokal justru kurang mengenal dan tidak menyukai masakan tradisional Indonesia. Oleh karena itu diperlukan penyedia informasi guna memperluas pengenalan dan wawasan akan masakan Nusantara kepada masyarakat sehingga masakan Nusantara akan menjadi lebih dikenal.
 </div>
 
-<h2>Link Lezatara</h2>
-<div align="center">
+<h2 align="center">Link Lezatara</h2>
+<div>
  <a href="https://lezatara.netlify.app/"></a>
 </div>
 
