@@ -14,7 +14,7 @@
 <h2 align="center">Link Lezatara</h2>
 
 <div>
- <a href="https://lezatara.netlify.app/"></a>
+ <a href="https://lezatara.netlify.app/" text-align="center">Lezatara</a>
 </div>
 
 <h2 align="center">Live Demo </h2>
