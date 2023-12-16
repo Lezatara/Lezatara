@@ -14,7 +14,7 @@
     max-width: 50vw;
   }
 
-  .search-form input[type='search'] {
+  .search-form input[type="search"] {
     font-size: 0.9rem;
   }
 
@@ -43,10 +43,12 @@
 
   #navigationDrawer ul {
     display: none;
+    padding-bottom: 0;
   }
 
   #navigationDrawer.open ul {
     display: block;
+    border-color: #fff5e0;
   }
 
   #navigationDrawer a {
@@ -101,6 +103,7 @@
     flex-direction: column; /* Ubah menjadi tata letak kolom */
     height: auto;
     padding: 10px;
+    padding-top: 0;
   }
 
   .blog > div {
@@ -110,11 +113,19 @@
   }
 
   .blog > img {
-    max-width: 100%; /* Mengisi lebar konten */
-    height: auto;
+    width: 105%;
+    padding: 0;
   }
 
   .blog p {
+    font-size: 14px;
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: justify;
+  }
+
+  .blogs p {
     font-size: 14px;
 
     text-align: justify;
@@ -144,7 +155,7 @@
   }
 
   .slide-content {
-    padding-left: 40px;
+    padding-left: 20px;
   }
 
   .name a {
@@ -158,7 +169,7 @@
 
   .button {
     font-size: 12px;
-    padding: 5px 10px;
+    padding: 9px 15px;
     margin: 6px;
   }
 
@@ -286,7 +297,7 @@
   }
 
   .contact > p > img {
-    width: 15%;
+    width: 13%;
     vertical-align: middle;
   }
 
@@ -301,7 +312,7 @@
   }
   .contact h2 {
     font-size: 10px;
-    font-family: 'Rubik', sans-serif;
+    font-family: "Rubik", sans-serif;
     font-weight: bold;
   }
 }

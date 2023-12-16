@@ -41,7 +41,7 @@ body {
   background-color: white;
 }
 
-.search-form input[type='search'] {
+.search-form input[type="search"] {
   width: 30vw;
   margin-left: 0rem;
   margin-right: 1rem;
@@ -50,7 +50,7 @@ body {
   color: hsl(252, 30%, 17%);
   border: none;
   border-radius: 0.5rem;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .search-form .fas.fa-search {
@@ -74,12 +74,12 @@ body {
 .hero h1 {
   font-size: 60px;
   font-weight: bold;
-  font-family: 'Quicksand', serif;
+  font-family: "Quicksand", serif;
   margin-bottom: 20px;
 }
 
 .hero h2 {
-  font-family: 'Montserrat', serif;
+  font-family: "Montserrat", serif;
   font-size: 25px;
   margin-bottom: 20px;
 }
@@ -124,7 +124,7 @@ body {
 
 #navigationDrawer a {
   margin-top: 10px;
-  font-family: 'Quicksand', serif;
+  font-family: "Quicksand", serif;
   text-decoration: none;
   font-size: 30px;
   font-weight: bolder;
@@ -174,7 +174,7 @@ body {
 
 .blog > div {
   width: 100%;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 23px;
   color: #000000;
 }
@@ -201,7 +201,7 @@ body {
 
 .blogs > div {
   width: 100%;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 23px;
   color: #000000;
 }
@@ -218,11 +218,11 @@ body {
   font-size: 18px;
   line-height: 1;
   text-align: center;
-  background-color: #ed7b7b;
+  background-color: #ef9595;
 }
 
 .title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: xx-large;
   padding-top: 40px;
   font-weight: bold;
@@ -299,7 +299,7 @@ body {
 }
 
 .name a {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: bold;
   color: #000000;
@@ -307,7 +307,7 @@ body {
 }
 
 .description {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 14px;
   color: #000000;
   text-align: center;
@@ -327,7 +327,7 @@ body {
   margin: 14px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 .button:hover {
@@ -519,7 +519,7 @@ body {
   align-items: center;
   padding: 5px 5%;
   background-color: #ef9595;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: bold;
   font-size: 12px;
 }
@@ -530,7 +530,7 @@ body {
 
 .contact h2 {
   font-size: 14px;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: bold;
 }
 
@@ -669,19 +669,7 @@ body {
 
 .social-links .fab.fa-instagram:hover {
   filter: none; /* Menghapus filter grayscale saat dihover */
-  background: linear-gradient(
-    to right,
-    #405de6,
-    #5851db,
-    #833ab4,
-    #c13584,
-    #e1306c,
-    #fd1d1d,
-    #f56040,
-    #f77737,
-    #fcaf45,
-    #ffdc80
-  ); /* Warna latar belakang Instagram (gradient warna asli) */
+  background: linear-gradient(to right, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #f77737, #fcaf45, #ffdc80); /* Warna latar belakang Instagram (gradient warna asli) */
   color: #ffffff; /* Warna ikon (putih) saat dihover */
 }
 
@@ -766,13 +754,26 @@ body {
   background-color: #ed7b7b;
 }
 
-.btn-primary {
+#submit-review,
+.submit-btn {
   background-color: #ed7b7b;
   color: #000000;
   border-color: #ed7b7b;
 }
 
-.btn-primary:hover {
+#submit-review:hover {
   background-color: #ed7b7b;
   border-color: #ed7b7b;
+}
+
+.btn:active,
+.submit-btn:active,
+#submit-review:active {
+  background-color: #ed7b7b;
+  border-color: #ed7b7b;
+  color: #fff;
+}
+
+.btn-primary .btn-primary:hover {
+  background-color: none;
 }
