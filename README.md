@@ -26,12 +26,12 @@
  
    <table>
     <tr>
-      <th> Lezatara_API </th>
-      <th> Back-end </th>
+      <th> API </th>
+      <th> Github Back-end </th>
     </tr>
     <tr>
-     <td> https://lezatara.netlify.app/ </td>
      <td> https://lezatara-backend.vercel.app/   </td>
+     <td> https://github.com/Lezatara/lezatara-backend   </td>
     </tr>
   </table>
        
@@ -138,4 +138,4 @@
 <br />
 <br />
 
-[webdev]: https://github.com/syfaacanzz/syfaacanzz
+[webdev]: https://github.com/Lezatara/Lezatara
