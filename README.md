@@ -23,6 +23,13 @@
 <a href="https://youtu.be/-qlSLXDAqXI?si=amwzUWIdheNBBzpZ" text-align="center">Live Demo Link</a>
 </div>
 
+<h2 align="center">User Manual Guide </h2>
+
+<div align="center">
+<a href="https://docs.google.com/document/d/1RV2VDO7to8GGV-rH3abZKw8VgVUDsc4aOcFHdulaHS0/edit?usp=sharing" text-align="center">User Manual Guide Link</a>
+</div>
+
+
 <h2 align="center"> Dokumentasi API & Git Back-End </h2>
 
 <div align="center" text-align=" left" >
