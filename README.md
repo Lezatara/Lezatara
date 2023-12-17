@@ -20,7 +20,7 @@
 <h2 align="center">Live Demo </h2>
 
 <div align="center">
-<a href="https://google.com" text-align="center">Live Demo Link</a>
+<a href="https://youtu.be/-qlSLXDAqXI?si=amwzUWIdheNBBzpZ" text-align="center">Live Demo Link</a>
 </div>
 
 <h2 align="center"> Dokumentasi API & Git Back-End </h2>
